@@ -1,0 +1,230 @@
+/*font-family: 'Cormorant Garamond', serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: none; }
+
+.header {
+  background: #fff;
+  padding-inline: 16px; }
+
+.nav {
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  font-size: 48px;
+  margin-top: 40px; }
+
+.nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none; }
+
+@media (max-width: 909px) {
+  .nav-list {
+    display: flex;
+    gap: 12px;
+    list-style: none; } }
+.nav-list a {
+  font-size: 18px;
+  opacity: 1;
+  color: #424242;
+  font-weight: 500;
+  border: solid 3px #FF9AA7;
+  padding: 10px 50px;
+  border-radius: 50px;
+  transition: background 0.5s ease; }
+  .nav-list a:hover {
+    background-color: #efbeb6;
+    transition: 0.5s; }
+
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #FF9AA7;
+  cursor: pointer; }
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #FF9AA7;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s; }
+
+@media (max-width: 852px) {
+  .hamburger {
+    display: block;
+    z-index: 2; }
+
+  .nav-list {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none; }
+
+  .nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s; }
+
+  .nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s; }
+
+  .nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s; }
+
+  .nav-list li:nth-child(4) a {
+    transition: 0.5s 0.8s; }
+
+  /* Estilos ativos */
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all; }
+
+  .nav.active .nav-list a {
+    opacity: 1; }
+
+  .nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent; }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg); }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px; } }
+main {
+  width: 400px;
+  height: auto;
+  text-align: justify;
+  background-color: #eaecec;
+  font-family: 'Cormorant Garamond', serif;
+  margin-top: 25vh;
+  margin-left: 8%;
+  padding: 50px;
+  border-radius: 20px; }
+  main h2 {
+    color: #5BB3BB;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 27px; }
+  main p {
+    font-size: 18px; }
+
+@media (max-width: 549px) {
+  main {
+    width: 80%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px; }
+    main h2 {
+      font-size: 23px; } }
+section {
+  background-color: #f8d6da;
+  background-image: linear-gradient(#e6a399, #f7ced4);
+  margin-top: 100px;
+  padding: 100px;
+  font-family: 'Cormorant Garamond', serif;
+  padding-bottom: 300px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px; }
+  section h2 {
+    color: #5BB3BB;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 30px; }
+  section .container {
+    margin-top: 50px;
+    flex-direction: row;
+    text-align: center;
+    display: flex;
+    gap: 5px 20px; }
+    section .container .primeiro img, section .container .segundo img, section .container .terceiro img, section .container .quarto img {
+      width: 70%;
+      height: 160%;
+      filter: blur(3px);
+      transition: transform 0.3s ease-in-out;
+      margin-bottom: 20px;
+      border-radius: 8px; }
+      section .container .primeiro img:hover, section .container .segundo img:hover, section .container .terceiro img:hover, section .container .quarto img:hover {
+        filter: none;
+        transform: scale(1.1); }
+    section .container .primeiro a, section .container .segundo a, section .container .terceiro a, section .container .quarto a {
+      font-size: 23px;
+      font-weight: bold;
+      color: #3d3d3d;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px #000;
+      transition: 0.5s ease; }
+      section .container .primeiro a:hover, section .container .segundo a:hover, section .container .terceiro a:hover, section .container .quarto a:hover {
+        color: white;
+        transition: 0.5s; }
+    section .container .primeiro {
+      margin-left: 10%;
+      margin-right: -8%; }
+    section .container .segundo {
+      margin-right: -8%; }
+    section .container .quarto {
+      margin-right: 10%;
+      margin-left: -8%; }
+
+@media (max-width: 818px) {
+  section {
+    background-color: yellow; }
+    section .container {
+      background-color: blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      section .container .primeiro, section .container .segundo, section .container .terceiro, section .container .quarto {
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        section .container .primeiro img, section .container .segundo img, section .container .terceiro img, section .container .quarto img {
+          width: 70%;
+          height: 160%;
+          filter: blur(0px);
+          transition: transform 0.3s ease-in-out;
+          margin-bottom: 20px;
+          border-radius: 8px; } }
+@media (max-width: 1164px) {
+  section .container .primeiro {
+    margin-left: 0%; }
+  section .container .quarto {
+    margin-right: 0%; } }
+@media (max-width: 980px) {
+  section .container .primeiro {
+    margin-left: 0%; }
+  section .container .quarto {
+    margin-right: 0%; } }
+
+/*# sourceMappingURL=style.css.map */
